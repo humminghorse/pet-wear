@@ -3,12 +3,14 @@
     class="card bg-base-100 h-auto mt-2 shadow-xl"
     style="width: calc(33.333333% - 1rem)"
   >
-    <figure class="px-2 pt-2">
-      <img
-        src="https://japan.cnet.com/storage/2019/09/20/d1fff7d2c7917d61b02c687ff70ce1a6/RABO0924-1.jpg"
-        class="rounded-xl"
-      />
-    </figure>
+    <nuxt-link to="/detail">
+      <figure class="px-2 pt-2">
+        <img
+          src="https://japan.cnet.com/storage/2019/09/20/d1fff7d2c7917d61b02c687ff70ce1a6/RABO0924-1.jpg"
+          class="rounded-xl"
+        />
+      </figure>
+    </nuxt-link>
     <div class="card-body items-center text-center">
       <h3 class="text-sm -ml-24 -mt-4">着用中のアイテム</h3>
       <div class="flex items-center">

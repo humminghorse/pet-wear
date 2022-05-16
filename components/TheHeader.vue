@@ -1,6 +1,6 @@
 <template>
   <!-- 参考: https://daisyui.com/components/navbar/#navbar-with-dropdown-center-logo-and-icon -->
-  <div class="navbar bg-base-100">
+  <div class="navbar bg-base-100 shadow">
     <div class="navbar-start">
       <!-- TODO: ヘッダー左端に検索窓か何かを追加する -->
       <!-- <div class="dropdown">
@@ -40,7 +40,7 @@
       </div> -->
     </div>
     <div class="navbar-center">
-      <a class="btn btn-ghost normal-case text-xl">P E T W E A R</a>
+      <nuxt-link to="/" class="btn btn-ghost normal-case text-xl">P E T W E A R</nuxt-link>
     </div>
     <div class="navbar-end">
       <button class="btn btn-ghost">
