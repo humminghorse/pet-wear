@@ -58,9 +58,9 @@
     <!-- body -->
     <div class="flex items-start bg-neutral">
       <!-- content_sub -->
-      <div>
+      <div class="w-3/5">
         <!-- コーディネート画像 -->
-        <div class="w-3/5">
+        <div class="w-full">
           <!-- TODO: 縦長にトリムしたい -->
           <img class="object-cover h-600 w-full" src="~/assets/image/miru-red-collar.jpg">
         </div>
@@ -75,10 +75,12 @@
 
       </div>
       <!-- content_main -->
-      <div>
-        <!-- TODO: コーディネート詳細 -->
-        <div>
-
+      <div class="w-2/5 p-4">
+        <!-- コーディネート詳細 -->
+        <div class="w-full px-4 py-4 bg-white border-2">
+          <h1 class="text-lg">みるのCatlog(Red)を使ったコーディネート</h1>
+          <p class="border-y my-2 py-2">赤い首輪型のIoTデバイスを着けています。まだ首輪に慣れていない様子です。</p>
+          <p class="text-sm text-transparent/50">2022/04/01 12:00:00</p>
         </div>
         <!-- TODO: 着用アイテム -->
         <div>
