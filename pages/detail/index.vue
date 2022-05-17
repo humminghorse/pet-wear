@@ -20,9 +20,9 @@
       <div class="mt-2">
         <!-- memo: btnクラス(https://daisyui.com/components/button/#button)の高さ指定(min-heigh, height)を上書きして調整 -->
         <!-- 疑問: プロパティ指定に推奨される順番ってある？(flex関連を先とか、サイズ関連を先とか) 統一できていればOK? -->
-        <button class="btn min-h-0 h-full flex flex-row p-2">
+        <button class="btn w-24 bg-accent text-white min-h-0 h-full flex p-2">
           <!-- memo: 横幅を指定しないと、アイコンと文字が横並びにならない -->
-          <ShareIcon class="w-5"/>
+          <ShareIcon class="w-5 mr-0.5 shrink-0"/>
           <span>シェアする</span>
         </button>
       </div>
@@ -47,7 +47,7 @@
       <!-- 疑問: 最後の子要素の位置だけを右端に指定できない？(他の子要素をグルーピングして、親要素にjustify-content: space-between;を指定することで、やりたいことは実現できた) -->
       <div class="pt-2">
         <!-- 疑問:  stroke-white fill-whiteでは白塗りにならず、text-whiteで白塗りになった。なぜ？ -->
-        <button class="btn min-h-0 h-full flex flex-row p-2 bg-accent text-white">
+        <button class="btn gap-x-0.5 min-h-0 h-full flex flex-row p-2 bg-accent text-white">
           <!-- memo: 横幅を指定しないと、アイコンと文字が横並びにならない -->
           <UserAddIcon class="w-5"/>
           <span class="text-white">フォローする</span>
@@ -78,21 +78,35 @@
       <div class="w-2/5 p-4">
         <!-- コーディネート詳細 -->
         <div class="w-full px-4 py-4 bg-white border-2">
-          <h1 class="text-lg">みるのCatlog(Red)を使ったコーディネート</h1>
-          <p class="border-y my-2 py-2">赤い首輪型のIoTデバイスを着けています。まだ首輪に慣れていない様子です。</p>
-          <p class="text-sm text-transparent/50">2022/04/01 12:00:00</p>
+          <h1 class="text-lg border-b pb-1">みるのCatlog(Red)を使ったコーディネート</h1>
+          <div class="my-2">
+            <p class="my-2">赤い首輪型のIoTデバイスを着けています。</p>
+            <p class="my-2">まだ首輪に慣れていない様子です。</p>
+          </div>
+          <p class="text-sm text-transparent/50 border-t pt-1">2022/04/01 12:00:00</p>
         </div>
         <!-- TODO: 着用アイテム -->
         <div class="w-full mt-4 px-4 py-4 bg-white border-2">
           <h1 class="text-lg">着用アイテム</h1>
-          <div class="flex flex-col items-center">
-            <figure class="px-2 pt-2">
+          <div class="flex gap-2">
+            <div class="flex flex-col items-center">
+            <figure class="pt-2">
               <img
                 src="https://japan.cnet.com/storage/2019/09/20/d1fff7d2c7917d61b02c687ff70ce1a6/RABO0924-1.jpg"
                 class="object-cover w-64 rounded-xl"
               />
             </figure>
             <p class="my-2 py-2">Catlog(Red)</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <figure class="pt-2">
+              <img
+                src="https://japan.cnet.com/storage/2019/09/20/d1fff7d2c7917d61b02c687ff70ce1a6/RABO0924-1.jpg"
+                class="object-cover w-64 rounded-xl"
+              />
+            </figure>
+            <p class="my-2 py-2">Catlog(Red)</p>
+          </div>
           </div>
         </div>
         <!-- TODO: タグ -->
