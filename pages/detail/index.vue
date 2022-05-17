@@ -6,20 +6,21 @@
     <TheHeader />
 
     <!-- 横並びで両端に配置 -->
-    <div class="flex flex-row justify-between">
-      <!-- パンくずリスト -->
+    <div class="flex flex-row justify-between">  <!-- memo: flexと指定したらflex-directionはrowが初期値なので、flex-rowの指定は省略できる -->
+      <!-- パンくずリスト: https://daisyui.com/components/breadcrumbs/#breadcrumbs -->
       <div class="text-sm breadcrumbs">
         <ul>
-          <li><a>TOP</a></li> 
-          <li><a>たま</a></li> 
+          <li><a>TOP</a></li>
+          <li><a>今橋 陵</a></li>
+          <li><a>みる</a></li> 
           <li>2022年4月1日のコーディネート</li>
         </ul>
       </div>
       <!-- シェアボタン -->
       <div class="mt-2">
-        <!-- TODO: シェアアイコンをボタン内に追加 -->
-        <!-- memo: btnクラスの高さ指定(min-heigh, height)を上書きして調整 -->
-        <button class="btn min-h-0 h-full flex-row p-2">
+        <!-- memo: btnクラス(https://daisyui.com/components/button/#button)の高さ指定(min-heigh, height)を上書きして調整 -->
+        <!-- 疑問: プロパティ指定に推奨される順番ってある？(flex関連を先とか、サイズ関連を先とか) 統一できていればOK? -->
+        <button class="btn min-h-0 h-full flex flex-row p-2">
           <!-- memo: 横幅を指定しないと、アイコンと文字が横並びにならない -->
           <ShareIcon class="w-5"/>
           <span>シェアする</span>
@@ -27,25 +28,42 @@
       </div>
     </div>
 
-
-
-    
+    <!-- ユーザー別のヘッダー -->
+    <div class="flex flex-row justify-between items-center w-full my-4">
+      <div class="flex flex-row items-center">
+        <!-- ユーザーアイコン -->
+        <!-- 疑問: divタグ必要？(imgタグに直接h,wを指定すれば済む。構造上のひとかたまりを示すために入れる？(それなら、user-iconみたいな分かりやすいclass名をつけた方が良さそう)) -->
+        <div class="h-16 w-16">
+          <!-- memo: object-coverとh,wを指定して画像のトリムをしないと横長の丸になる https://www.webcreatorbox.com/tech/object-fit -->
+          <img class="object-cover h-full w-full rounded-full" src="~/assets/image/miru.jpg">
+        </div>
+        <!-- ユーザー名 -->
+        <div class="ml-4">
+          <!-- memo: pかspanかで迷ったけど、意味をもつテキストの固まりはpになるらしい -->
+          <p class="text-2xl">みる</p>
+        </div>
+      </div>
+      <!-- フォローボタン -->
+      <!-- 疑問: 最後の子要素の位置だけを右端に指定できない？(他の子要素をグルーピングして、親要素にjustify-content: space-between;を指定することで、やりたいことは実現できた) -->
+      <div class="pt-2">
+        <!-- 疑問:  stroke-white fill-whiteでは白塗りにならず、text-whiteで白塗りになった。なぜ？ -->
+        <button class="btn min-h-0 h-full flex flex-row p-2 bg-accent text-white">
+          <!-- memo: 横幅を指定しないと、アイコンと文字が横並びにならない -->
+          <UserAddIcon class="w-5"/>
+          <span class="text-white">フォローする</span>
+        </button>
+      </div>
+    </div>
 
     <TheFooter />
   </div>
 </template>
 <script>
 // 参考: https://github.com/tailwindlabs/heroicons#vue
-import { ShareIcon } from '@heroicons/vue/solid'
+import { ShareIcon, UserAddIcon } from '@heroicons/vue/solid'
 export default {
-  components: { ShareIcon }
+  components: { ShareIcon, UserAddIcon }
 }
 </script>
 <style lang="css">
-/* .bg-orange-sample {
-  background-color: #e7541c;
-}
-.bg-blue-sample {
-  background-color: #000099;
-} */
 </style>
