@@ -83,8 +83,17 @@
           <p class="text-sm text-transparent/50">2022/04/01 12:00:00</p>
         </div>
         <!-- TODO: 着用アイテム -->
-        <div>
-          
+        <div class="w-full mt-4 px-4 py-4 bg-white border-2">
+          <h1 class="text-lg">着用アイテム</h1>
+          <div class="flex flex-col items-center">
+            <figure class="px-2 pt-2">
+              <img
+                src="https://japan.cnet.com/storage/2019/09/20/d1fff7d2c7917d61b02c687ff70ce1a6/RABO0924-1.jpg"
+                class="object-cover w-64 rounded-xl"
+              />
+            </figure>
+            <p class="my-2 py-2">Catlog(Red)</p>
+          </div>
         </div>
         <!-- TODO: タグ -->
         <div>
