@@ -55,6 +55,42 @@
       </div>
     </div>
 
+    <!-- body -->
+    <div class="flex items-start bg-neutral">
+      <!-- content_sub -->
+      <div>
+        <!-- コーディネート画像 -->
+        <div class="w-3/5">
+          <!-- TODO: 縦長にトリムしたい -->
+          <img class="object-cover h-600 w-full" src="~/assets/image/miru-red-collar.jpg">
+        </div>
+        <!-- TODO: 各種アクションボタン -->
+        <div>
+
+        </div>
+        <!-- TODO: コメント欄 -->
+        <div>
+
+        </div>
+
+      </div>
+      <!-- content_main -->
+      <div>
+        <!-- TODO: コーディネート詳細 -->
+        <div>
+
+        </div>
+        <!-- TODO: 着用アイテム -->
+        <div>
+          
+        </div>
+        <!-- TODO: タグ -->
+        <div>
+          
+        </div>
+      </div>
+    </div>
+
     <TheFooter />
   </div>
 </template>
