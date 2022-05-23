@@ -15,30 +15,4 @@ const props = defineProps({
   description: String,
   date: String,
 })
-// type Props = {
-//   petName: string;
-//   itemName: string;
-//   description: string;
-//   date: string;
-// };
-// export default defineComponent({
-//   props: {
-//     petName: {
-//       type: String,
-//       required: true,
-//     },
-//     itemName: {
-//       type: String,
-//       required: true,
-//     },
-//     description: {
-//       type: String,
-//       required: true,
-//     },
-//     date: {
-//       type: String,
-//       required: true,
-//     },
-//   },
-// });
 </script>
