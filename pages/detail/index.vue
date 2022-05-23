@@ -77,14 +77,12 @@
       <!-- content_main -->
       <div class="w-2/5 p-4">
         <!-- コーディネート詳細 -->
-        <div class="w-full px-4 py-4 bg-white border-2">
-          <h1 class="text-lg border-b pb-1">みるのCatlog(Red)を使ったコーディネート</h1>
-          <div class="my-2">
-            <p class="my-2">赤い首輪型のIoTデバイスを着けています。</p>
-            <p class="my-2">まだ首輪に慣れていない様子です。</p>
-          </div>
-          <p class="text-sm text-transparent/50 border-t pt-1">2022/04/01 12:00:00</p>
-        </div>
+        <CoordinationDetail
+          :petName="CoordinationDetailJson.coordinationDetail.petName"
+          :itemName="CoordinationDetailJson.coordinationDetail.itemName"
+          :description="CoordinationDetailJson.coordinationDetail.description"
+          :date="CoordinationDetailJson.coordinationDetail.date"
+        />
         <!-- TODO: 着用アイテム -->
         <div class="w-full mt-4 px-4 py-4 bg-white border-2">
           <h1 class="text-lg">着用アイテム</h1>
@@ -119,12 +117,11 @@
     <TheFooter />
   </div>
 </template>
-<script>
+<script setup lang="ts"> // 参考: https://zenn.dev/coedo/articles/86bc31acb4ea47
 // 参考: https://github.com/tailwindlabs/heroicons#vue
 import { ShareIcon, UserAddIcon } from '@heroicons/vue/solid'
-export default {
-  components: { ShareIcon, UserAddIcon }
-}
+import CoordinationDetailJson from '@/assets/json/coordinationDetail.json'
+const coordinationDetail = CoordinationDetailJson.coordinationDetailJson
 </script>
 <style lang="css">
 </style>
