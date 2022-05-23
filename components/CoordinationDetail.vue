@@ -8,31 +8,37 @@
     <p class="text-sm text-transparent/50 border-t pt-1">{{date}}</p>
   </div>
 </template>
-<script lang="ts">
-type Props = {
-  petName: string;
-  itemName: string;
-  description: string;
-  date: string;
-};
-export default defineComponent({
-  props: {
-    petName: {
-      type: String,
-      required: true,
-    },
-    itemName: {
-      type: String,
-      required: true,
-    },
-    description: {
-      type: String,
-      required: true,
-    },
-    date: {
-      type: String,
-      required: true,
-    },
-  },
-});
+<script setup lang="ts">
+const props = defineProps({
+  petName: String,
+  itemName: String,
+  description: String,
+  date: String,
+})
+// type Props = {
+//   petName: string;
+//   itemName: string;
+//   description: string;
+//   date: string;
+// };
+// export default defineComponent({
+//   props: {
+//     petName: {
+//       type: String,
+//       required: true,
+//     },
+//     itemName: {
+//       type: String,
+//       required: true,
+//     },
+//     description: {
+//       type: String,
+//       required: true,
+//     },
+//     date: {
+//       type: String,
+//       required: true,
+//     },
+//   },
+// });
 </script>

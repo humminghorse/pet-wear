@@ -60,10 +60,11 @@
       <!-- content_sub -->
       <div class="w-3/5">
         <!-- コーディネート画像 -->
-        <div class="w-full">
-          <!-- TODO: 縦長にトリムしたい -->
-          <img class="object-cover h-600 w-full" src="~/assets/image/miru-red-collar.jpg">
-        </div>
+        <CoordinationImage
+          :coordinationImagePath='"/assets/image/miru-red-collar.jpg"'
+        />
+
+        
         <!-- TODO: 各種アクションボタン -->
         <div>
 
@@ -121,6 +122,7 @@
 // 参考: https://github.com/tailwindlabs/heroicons#vue
 import { ShareIcon, UserAddIcon } from '@heroicons/vue/solid'
 import CoordinationDetailJson from '@/assets/json/coordinationDetail.json'
+import CoordinationImage from '../../components/CoordinationImage.vue'
 const coordinationDetail = CoordinationDetailJson.coordinationDetailJson
 </script>
 <style lang="css">
