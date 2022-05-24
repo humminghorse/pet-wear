@@ -62,6 +62,7 @@
         <!-- コーディネート画像 -->
         <CoordinationImage
           :coordinationImagePath='"/assets/image/miru-red-collar.jpg"'
+          :watchedCount="158"
         />
 
         
