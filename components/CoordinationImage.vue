@@ -11,8 +11,6 @@
       </div>
     </div>
     <!-- アイテムタグ -->
-    <!-- TODO: タグの位置を動的に設定する -->
-    <!-- tailwindのtop-n のnの値では足りなさそう -->
     <a
       class="w-24 h-6 pd-2 absolute flex items-center justify-center bg-black bg-opacity-75 text-white text-xs"
       :style='itemTagPosition'
