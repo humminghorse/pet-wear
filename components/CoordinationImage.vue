@@ -15,7 +15,7 @@
     <!-- tailwindのtop-n のnの値では足りなさそう -->
     <a
       class="w-24 h-6 pd-2 absolute flex items-center justify-center bg-black bg-opacity-75 text-white text-xs"
-      style="left: 58%; top:40%; "
+      :style='itemTagPosition'
     >
       <p>Catlog(Red)</p>
     </a>
@@ -25,7 +25,8 @@
 import { EyeIcon } from '@heroicons/vue/solid'
 const props = defineProps({
   coordinationImagePath: String,
-  watchedCount: Number
+  watchedCount: Number,
+  itemTagPosition: Object
 })
 // 参考: Nuxt3 img v-bind:srcで画像が表示されない時の解決法 https://zenn.dev/one_dock/articles/77cd256c887204
 const coordinationImageUrl = (): string => {

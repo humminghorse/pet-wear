@@ -63,8 +63,8 @@
         <CoordinationImage
           :coordinationImagePath='"/assets/image/miru-red-collar.jpg"'
           :watchedCount="158"
+          :itemTagPosition="{ left: '58%', top:'40%' }"
         />
-
         
         <!-- TODO: 各種アクションボタン -->
         <div>
