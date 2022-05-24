@@ -10,6 +10,13 @@
         <p>{{watchedCount}}</p>
       </div>
     </div>
+    <!-- アイテムタグ -->
+    <!-- TODO: 画像のサイズ変更に追従できるようにする -->
+    <!-- TODO: タグの位置を動的に設定する -->
+    <!-- tailwindのtop-n のnの値では足りなさそう -->
+    <a class="w-24 h-6 pd-2 absolute left-64 top-32 flex items-center justify-center bg-black bg-opacity-75 text-white text-xs">
+      <p>Catlog(Red)</p>
+    </a>
   </div>
 </template>
 <script setup lang="ts">
