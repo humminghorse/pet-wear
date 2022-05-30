@@ -39,12 +39,12 @@
         />
       </div>
       <div class="content flex flex-wrap gap-4 mx-4 my-4 w-3/4">
-        <template v-for="n of 5" :key="n">
+        <template v-for="coordinationListItem in  coordinationList" :key="coordinationListItem.coordinationId">
           <CoordinationListItem
-            coordinationImgSrc="https://japan.cnet.com/storage/2019/09/20/d1fff7d2c7917d61b02c687ff70ce1a6/RABO0924-1.jpg"
-            itemImgSrc="https://japan.cnet.com/storage/2019/09/20/d1fff7d2c7917d61b02c687ff70ce1a6/RABO0924-1.jpg"
-            itemName="Catlog"
-            itemColor="Red"
+            :coordinationImgSrc="coordinationListItem.coordinationImgSrc"
+            :itemImgSrc="coordinationListItem.itemImgSrc"
+            :itemName="coordinationListItem.itemName"
+            itemColor=""
           />
         </template>
       </div>
@@ -53,6 +53,11 @@
     <TheFooter />
   </div>
 </template>
+<script setup lang="ts">
+import CoordinationListJson from '@/assets/json/coordinationList.json'
+const coordinationList = CoordinationListJson.coordinationList
+console.log(coordinationList)
+</script>
 <style lang="css">
 /* .bg-orange-sample {
   background-color: #e7541c;
