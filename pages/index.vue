@@ -11,7 +11,7 @@
     </div>
     <div class="border-b-2">
       <h1 class="mt-4 text-2xl">コーディネート一覧</h1>
-      <p class="mt-2 text-right">5件</p>
+      <p class="mt-2 text-right">{{coordinationListCount}}件</p>
     </div>
 
     <!-- body -->
@@ -41,6 +41,7 @@
       <div class="content flex flex-wrap gap-4 mx-4 my-4 w-3/4">
         <template v-for="coordinationListItem in  coordinationList" :key="coordinationListItem.coordinationId">
           <CoordinationListItem
+            :coordinationId="coordinationListItem.coordinationId"
             :coordinationImgSrc="coordinationListItem.coordinationImgSrc"
             :itemImgSrc="coordinationListItem.itemImgSrc"
             :itemName="coordinationListItem.itemName"
@@ -56,7 +57,7 @@
 <script setup lang="ts">
 import CoordinationListJson from '@/assets/json/coordinationList.json'
 const coordinationList = CoordinationListJson.coordinationList
-console.log(coordinationList)
+const coordinationListCount = coordinationList.length
 </script>
 <style lang="css">
 /* .bg-orange-sample {

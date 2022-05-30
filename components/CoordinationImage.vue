@@ -1,7 +1,7 @@
 <template>
   <div class="w-full relative">
     <!-- TODO: 縦長にトリムしたい -->
-    <img class="object-cover h-600 w-full" :src='coordinationImageUrl()'>
+    <img class="object-cover h-600 w-full" :src="coordinationImgSrc">
     <!-- 参考: 【HTML・CSS】画像の上に画像や文字を重ねる方法 https://public-constructor.com/display-icon-on-image/ -->
     <!-- 参考: CSSのposition: absoluteとrelativeとは https://uxmilk.jp/63409 -->
     <div class="w-20 h-6 bg-black bg-opacity-50 absolute bottom-1 left-1">
@@ -17,19 +17,16 @@
       class="w-24 h-6 pd-2 absolute flex items-center justify-center bg-black bg-opacity-75 text-white text-xs"
       :style='itemTagPosition'
     >
-      <p>Catlog(Red)</p>
+      <p>{{itemName}}</p>
     </a>
   </div>
 </template>
 <script setup lang="ts">
 import { EyeIcon } from '@heroicons/vue/solid'
 const props = defineProps({
-  coordinationImagePath: String,
+  coordinationImgSrc: String,
   watchedCount: Number,
-  itemTagPosition: Object
+  itemTagPosition: Object,
+  itemName: String
 })
-// 参考: Nuxt3 img v-bind:srcで画像が表示されない時の解決法 https://zenn.dev/one_dock/articles/77cd256c887204
-const coordinationImageUrl = (): string => {
-  return new URL(props.coordinationImagePath, import.meta.url).href
-}
 </script>

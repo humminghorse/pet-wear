@@ -3,7 +3,7 @@
     class="card bg-base-100 h-auto mt-2 shadow-xl"
     style="width: calc(33.333333% - 1rem)"
   >
-    <nuxt-link to="/detail">
+    <nuxt-link :to="'/detail/' + coordinationId">
       <figure class="px-2 pt-2">
         <img
           :src="coordinationImgSrc"
@@ -36,6 +36,7 @@
 </template>
 <script lang="ts">
 type Props = {
+  coordinationId: string;
   coordinationImgSrc: string;
   itemImgSrc: string;
   itemName: string;
@@ -43,6 +44,10 @@ type Props = {
 };
 export default defineComponent({
   props: {
+    coordinationId: {
+      type: String,
+      required: true,
+    },
     coordinationImgSrc: {
       type: String,
       required: true,

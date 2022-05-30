@@ -11,9 +11,9 @@
       <div class="text-sm breadcrumbs">
         <ul>
           <li><a>TOP</a></li>
-          <li><a>今橋 陵</a></li>
-          <li><a>みる</a></li> 
-          <li>2022年4月1日のコーディネート</li>
+          <!-- <li><a>今橋 陵</a></li>  -->
+          <li><a>{{coordinationDetail.petName}}</a></li>
+          <li>{{formatDate(coordinationDetail.date)}}のコーディネート</li>
         </ul>
       </div>
       <!-- シェアボタン -->
@@ -35,12 +35,12 @@
         <!-- 疑問: divタグ必要？(imgタグに直接h,wを指定すれば済む。構造上のひとかたまりを示すために入れる？(それなら、user-iconみたいな分かりやすいclass名をつけた方が良さそう)) -->
         <div class="h-16 w-16">
           <!-- memo: object-coverとh,wを指定して画像のトリムをしないと横長の丸になる https://www.webcreatorbox.com/tech/object-fit -->
-          <img class="object-cover h-full w-full rounded-full" src="~/assets/image/miru.jpg">
+          <img class="object-cover h-full w-full rounded-full" :src="coordinationDetail.petIconSrc">
         </div>
         <!-- ユーザー名 -->
         <div class="ml-4">
           <!-- memo: pかspanかで迷ったけど、意味をもつテキストの固まりはpになるらしい -->
-          <p class="text-2xl">みる</p>
+          <p class="text-2xl">{{coordinationDetail.petName}}</p>
         </div>
       </div>
       <!-- フォローボタン -->
@@ -61,9 +61,10 @@
       <div class="w-3/5">
         <!-- コーディネート画像 -->
         <CoordinationImage
-          :coordinationImagePath='"/assets/image/miru-red-collar.jpg"'
-          :watchedCount="158"
-          :itemTagPosition="{ left: '58%', top:'40%' }"
+          :coordinationImgSrc="coordinationDetail.coordinationImgSrc"
+          :watchedCount="coordinationDetail.watchedCount"
+          :itemTagPosition="coordinationDetail.itemTagPosition"
+          :itemName="coordinationDetail.itemName"
         />
         
         <!-- TODO: 各種アクションボタン -->
@@ -80,33 +81,24 @@
       <div class="w-2/5 p-4">
         <!-- コーディネート詳細 -->
         <CoordinationDetail
-          :petName="CoordinationDetailJson.coordinationDetail.petName"
-          :itemName="CoordinationDetailJson.coordinationDetail.itemName"
-          :description="CoordinationDetailJson.coordinationDetail.description"
-          :date="CoordinationDetailJson.coordinationDetail.date"
+          :petName="coordinationDetail.petName"
+          :itemName="coordinationDetail.itemName"
+          :description="coordinationDetail.description"
+          :date="coordinationDetail.date"
         />
         <!-- TODO: 着用アイテム -->
         <div class="w-full mt-4 px-4 py-4 bg-white border-2">
           <h1 class="text-lg">着用アイテム</h1>
-          <div class="flex gap-2">
+          <div class="flex gap-2 items-center justify-center">
             <div class="flex flex-col items-center">
-            <figure class="pt-2">
-              <img
-                src="https://japan.cnet.com/storage/2019/09/20/d1fff7d2c7917d61b02c687ff70ce1a6/RABO0924-1.jpg"
-                class="object-cover w-64 rounded-xl"
-              />
-            </figure>
-            <p class="my-2 py-2">Catlog(Red)</p>
-          </div>
-          <div class="flex flex-col items-center">
-            <figure class="pt-2">
-              <img
-                src="https://japan.cnet.com/storage/2019/09/20/d1fff7d2c7917d61b02c687ff70ce1a6/RABO0924-1.jpg"
-                class="object-cover w-64 rounded-xl"
-              />
-            </figure>
-            <p class="my-2 py-2">Catlog(Red)</p>
-          </div>
+              <figure class="pt-2">
+                <img
+                  :src="coordinationDetail.itemImgSrc"
+                  class="object-cover w-64 rounded-xl"
+                />
+              </figure>
+              <p class="my-2 py-2">{{coordinationDetail.itemName}}</p>
+            </div>
           </div>
         </div>
         <!-- TODO: タグ -->
@@ -123,8 +115,29 @@
 // 参考: https://github.com/tailwindlabs/heroicons#vue
 import { ShareIcon, UserAddIcon } from '@heroicons/vue/solid'
 import CoordinationDetailJson from '@/assets/json/coordinationDetail.json'
-import CoordinationImage from '../../components/CoordinationImage.vue'
-const coordinationDetail = CoordinationDetailJson.coordinationDetailJson
+import CoordinationListJson from '@/assets/json/coordinationList.json'
+
+const route = useRoute()
+const coordinationId = route.params.id
+
+const coordinationList = CoordinationListJson.coordinationList
+const coordinationDetail = coordinationList.find(coordinationDetail => coordinationDetail.coordinationId === coordinationId)
+
+// TODO: 共通部品化
+const formatDate = (date) =>{
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) 
+        month = '0' + month;
+    if (day.length < 2) 
+        day = '0' + day;
+
+    return year + "年" + month + "月" + day + "日";
+  }
+
 </script>
 <style lang="css">
 </style>

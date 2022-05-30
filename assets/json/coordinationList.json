@@ -1,45 +1,75 @@
 {
   "coordinationList": [
     {
-      "coordinationId": 1,
+      "coordinationId": "1",
       "coordinationImgSrc": "/assets/image/miru-red-collar.jpg",
+      "watchedCount": 158,
+      "itemTagPosition": { 
+        "left": "58%",
+        "top": "40%"
+      },
       "petName": "みる",
+      "petIconSrc": "/assets/image/miru.jpg",
       "itemName": "Catlog(Red)",
       "itemImgSrc": "https://japan.cnet.com/storage/2019/09/20/d1fff7d2c7917d61b02c687ff70ce1a6/RABO0924-1.jpg",
       "description": "赤い首輪型のIoTデバイスを着けています。\nまだ首輪に慣れていない様子です。",
       "date": "2022/04/01 12:00:00"
     },
     {
-      "coordinationId": 2,
+      "coordinationId": "2",
       "coordinationImgSrc": "/assets/image/pan-red-collar.jpeg",
+      "watchedCount": 200,
+      "itemTagPosition": { 
+        "left": "58%",
+        "top": "67%"
+      },
       "petName": "ぱん",
+      "petIconSrc": "/assets/image/pan.jpg",
       "itemName": "Catlog(Red)",
       "itemImgSrc": "https://japan.cnet.com/storage/2019/09/20/d1fff7d2c7917d61b02c687ff70ce1a6/RABO0924-1.jpg",
-      "description": "赤い首輪型のIoTデバイスを着けています。\n同系色の舌が少し出ているのがポイントです。",
+      "description": "赤い首輪型のIoTデバイスを着けています。\n同系色の舌をちょっとだけ見せているのがポイントです。",
       "date": "2022/04/01 13:00:00"
     },
     {
-      "coordinationId": 3,
+      "coordinationId": "3",
       "coordinationImgSrc": "/assets/image/miru-yellow-collar.jpeg",
+      "watchedCount": 300,
+      "itemTagPosition": { 
+        "left": "65%",
+        "top": "67%"
+      },
       "petName": "みる",
+      "petIconSrc": "/assets/image/miru.jpg",
       "itemName": "ハンドメイドのお花付き首輪(Yellow)",
       "itemImgSrc": "https://m.media-amazon.com/images/I/51QOqI+9hbS._AC_SX679_.jpg",
       "description": "ニット素材のお花がついた黄色の首輪を着けています。\n目の色と揃えて統一感を演出しています。",
       "date": "2022/04/01 14:00:00"
     },
     {
-      "coordinationId": 4,
+      "coordinationId": "4",
       "coordinationImgSrc": "/assets/image/pan-with-nessie.jpeg",
+      "watchedCount": 400,
+      "itemTagPosition": { 
+        "left": "70%",
+        "top": "70%"
+      },
       "petName": "ぱん",
+      "petIconSrc": "/assets/image/pan.jpg",
       "itemName": "ネッシーぬいぐるみ",
       "itemImgSrc": "https://m.media-amazon.com/images/I/717gnxZcjOL._AC_SX679_.jpg",
       "description": "人気ゲームに登場するキャラクターが家にやってきました。匂いを嗅いで、仲良くなれそうかを確認しています。",
       "date": "2022/04/01 15:00:00"
     },
     {
-      "coordinationId": 5,
+      "coordinationId": "5",
       "coordinationImgSrc": "/assets/image/pan-in-nepia.jpeg",
+      "watchedCount": 500,
+      "itemTagPosition": { 
+        "left": "38%",
+        "top": "70%"
+      },
       "petName": "ぱん",
+      "petIconSrc": "/assets/image/pan.jpg",
       "itemName": "nepia",
       "itemImgSrc": "https://m.media-amazon.com/images/I/51EKm87kozL._AC_SX679_.jpg",
       "description": "箱型のものにはとりあえず入ってみると決めているようです。",
