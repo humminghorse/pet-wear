@@ -41,7 +41,7 @@
         />
       </div>
       <div class="content flex flex-wrap gap-4 mx-4 my-4 w-3/4">
-        <template v-for="coordinationListItem in  coordinationList" :key="coordinationListItem.coordinationId">
+        <template v-for="coordinationListItem in  FilteredCoordinationList" :key="coordinationListItem.coordinationId">
           <CoordinationListItem
             :coordinationId="coordinationListItem.coordinationId"
             :coordinationImgSrc="coordinationListItem.coordinationImgSrc"
@@ -63,13 +63,12 @@ const itemColors = ItemColorsJson.itemColors
 const checkedItemColor = ref<String>('')
 
 
-const coordinationList = reactive(CoordinationListJson.coordinationList)
-const FilteredCoordinationList = reactive(CoordinationListJson.coordinationList)
-const coordinationListCount = coordinationList.length
+const coordinationList = ref(CoordinationListJson.coordinationList)
+const FilteredCoordinationList = ref(CoordinationListJson.coordinationList)
+const coordinationListCount = FilteredCoordinationList.value.length
 
 watch(checkedItemColor, () => {
-  console.log(checkedItemColor.value)
-  coordinationList = coordinationList.filter(item => item.itemColor === checkedItemColor.value)
+  FilteredCoordinationList.value = coordinationList.value.filter(item => item.itemColor === checkedItemColor.value)
 })
 
 </script>
