@@ -1,0 +1,24 @@
+{
+  "itemColors": [
+    {
+      "value": "white",
+      "label": "白"
+    },
+    {
+      "value": "black",
+      "label": "黒"
+    },
+    {
+      "value": "red",
+      "label": "赤"
+    },
+    {
+      "value": "yellow",
+      "label": "黄"
+    },
+    {
+      "value": "green",
+      "label": "緑"
+    }
+  ]
+}

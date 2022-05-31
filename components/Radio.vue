@@ -1,39 +1,34 @@
 <template>
   <h3 class="text-lg mt-2">{{ radioTitle }}</h3>
-  <template v-for="labeltext in labelTexts">
+  <template
+    v-for="(radioItem, index) in radioItems"
+    :key="index"
+  >
     <div class="form-control">
       <label class="label cursor-pointer justify-start">
         <input
           type="radio"
-          name="radioName"
           class="radio checked:bg-accent mr-2"
-          checked
+          :name="radioName"
+          :value='radioItem.value'
+          v-model='inputCheckedValue'
         />
-        <span class="label-text"> {{ labeltext }} </span>
+        <span class="label-text"> {{ radioItem.label }} </span>
       </label>
     </div>
   </template>
 </template>
-<script lang="ts">
-type Props = {
-  radioTitle: string;
-  radioName: string;
-  labelTexts: string[];
-};
-export default defineComponent({
-  props: {
-    radioTitle: {
-      type: String,
-      required: true,
-    },
-    radioName: {
-      type: String,
-      required: true,
-    },
-    labelTexts: {
-      type: Array as string,
-      required: true,
-    },
-  },
-});
+<script setup lang="ts">
+const props = defineProps({
+  radioTitle: String,
+  radioName: String,
+  checkedValue: String,
+  radioItems: Array as Object[]
+})
+const emit = defineEmits(['update:checkedValue'])
+const inputCheckedValue = ref<String>(props.checkedValue)
+watch(inputCheckedValue, () => {
+  emit('update:checkedValue', inputCheckedValue.value)
+})
+// const checked
 </script>

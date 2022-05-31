@@ -17,7 +17,7 @@
     <!-- body -->
     <div class="flex items-start bg-neutral">
       <div class="control-panel bg-white flex-auto m-4 p-2 w-1/12">
-        <Radio
+        <!-- <Radio
           radioTitle="ペットの種類"
           radioName="radio-pet-type"
           v-bind:labelTexts="['犬', '猫']"
@@ -30,12 +30,14 @@
         <Radio
           radioTitle="アイテムの種類"
           radioName="radio-item-type"
-          v-bind:labelTexts="['首輪', '服']"
-        />
+          v-bind:labelTexts="['首輪', '服', 'その他']"
+        /> -->
         <Radio
           radioTitle="アイテムの色"
           radioName="radio-item-color"
-          v-bind:labelTexts="['白', '黒', '赤', '青', '黄色']"
+          :radioItems="itemColors"
+          :checkedValue="checkedItemColor"
+          @update:checkedValue='newValue => {checkedItemColor = newValue}'
         />
       </div>
       <div class="content flex flex-wrap gap-4 mx-4 my-4 w-3/4">
@@ -56,8 +58,20 @@
 </template>
 <script setup lang="ts">
 import CoordinationListJson from '@/assets/json/coordinationList.json'
-const coordinationList = CoordinationListJson.coordinationList
+import ItemColorsJson from '@/assets/json/itemColors.json'
+const itemColors = ItemColorsJson.itemColors
+const checkedItemColor = ref<String>('')
+
+
+const coordinationList = reactive(CoordinationListJson.coordinationList)
+const FilteredCoordinationList = reactive(CoordinationListJson.coordinationList)
 const coordinationListCount = coordinationList.length
+
+watch(checkedItemColor, () => {
+  console.log(checkedItemColor.value)
+  coordinationList = coordinationList.filter(item => item.itemColor === checkedItemColor.value)
+})
+
 </script>
 <style lang="css">
 /* .bg-orange-sample {
