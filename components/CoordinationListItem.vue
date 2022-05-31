@@ -7,7 +7,7 @@
       <figure class="px-2 pt-2">
         <img
           :src="coordinationImgSrc"
-          class="rounded-xl"
+          class="rounded-xl object-contain h-48"
         />
       </figure>
     </nuxt-link>
@@ -16,7 +16,7 @@
       <div class="flex items-center">
         <img
           :src="itemImgSrc"
-          class="rounded-xl h-12"
+          class="rounded-xl h-12 object-contain"
         />
         <p class="text-sm ml-4">
           {{ itemName }}
