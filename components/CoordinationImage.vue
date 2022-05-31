@@ -14,10 +14,10 @@
     <!-- TODO: daisyのtooltipを使う https://daisyui.com/components/tooltip/ -->
     <!-- TODO: https://daisyui.com/components/button/#icon-at-end -->
     <a
-      class="w-24 h-6 pd-2 absolute flex items-center justify-center bg-black bg-opacity-75 text-white text-xs"
+      class="w-auto py-1 px-2 absolute flex items-center justify-start bg-black bg-opacity-75 text-white text-xs item-tag cursor-pointer"
       :style='itemTagPosition'
     >
-      <p>{{itemName}}</p>
+      <span class='truncate item-text'>{{itemName}}</span>
     </a>
   </div>
 </template>
@@ -30,3 +30,14 @@ const props = defineProps({
   itemName: String
 })
 </script>
+<style lang="css">
+.item-tag {
+  max-width: 10rem;
+}
+.item-tag:hover > .item-text {
+  @apply text-clip overflow-auto whitespace-normal;
+  /* overflow: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap; */
+}
+</style>
