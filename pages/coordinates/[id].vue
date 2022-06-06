@@ -42,7 +42,7 @@
     <div class="flex items-start bg-neutral">
       <!-- サブコンテンツ -->
       <div class="w-3/5">
-        <CoordinateImage
+        <CoordinatesImage
           :coordinateImgSrc="coordinateDetail.coordinateImgSrc"
           :watchedCount="coordinateDetail.watchedCount"
           :itemTagPosition="coordinateDetail.itemTagPosition"
@@ -61,7 +61,7 @@
       </div>
       <!-- メインコンテンツ -->
       <div class="w-2/5 p-4">
-        <CoordinateDetail
+        <CoordinatesDetail
           :petName="coordinateDetail.petName"
           :itemName="coordinateDetail.itemName"
           :description="coordinateDetail.description"
@@ -93,7 +93,6 @@
 </template>
 <script setup lang="ts">
 import { ShareIcon, UserAddIcon } from '@heroicons/vue/solid'
-import CoordinateDetailJson from '@/assets/json/coordinateDetail.json'
 import CoordinateListJson from '@/assets/json/coordinateList.json'
 import { yearMonthDate }from '@/utils/dateFormatters.ts'
 

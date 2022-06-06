@@ -3,7 +3,7 @@
     class="card bg-base-100 h-auto mt-2 shadow-xl"
     style="width: calc(33.333333% - 1rem)"
   >
-    <a :href="'/detail/' + coordinateId">
+    <a :href="'/coordinates/' + coordinateId">
       <figure class="px-2 pt-2">
         <img
           :src="coordinateImgSrc"
