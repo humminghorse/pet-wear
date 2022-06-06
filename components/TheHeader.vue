@@ -40,7 +40,7 @@
       </div> -->
     </div>
     <div class="navbar-center">
-      <nuxt-link to="/" class="btn btn-ghost normal-case text-xl">P E T W E A R</nuxt-link>
+      <a href="/" class="btn btn-ghost normal-case text-xl">P E T W E A R</a>
     </div>
     <div class="navbar-end">
       <button class="btn btn-ghost">
