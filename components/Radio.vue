@@ -19,16 +19,16 @@
   </template>
 </template>
 <script setup lang="ts">
+import { PropType } from "vue"
 const props = defineProps({
   radioTitle: String,
   radioName: String,
   checkedValue: String,
-  radioItems: Array as Object[]
+  radioItems: Array as PropType<any[]>
 })
 const emit = defineEmits(['update:checkedValue'])
 const inputCheckedValue = ref<String>(props.checkedValue)
 watch(inputCheckedValue, () => {
   emit('update:checkedValue', inputCheckedValue.value)
 })
-// const checked
 </script>

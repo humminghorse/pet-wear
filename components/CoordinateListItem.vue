@@ -20,7 +20,6 @@
         />
         <p class="text-sm ml-4">
           {{ itemName }}
-          <!-- <br />(カラー: {{ itemColor }}) -->
         </p>
       </div>
       <div class="card-actions mt-2">
@@ -34,36 +33,12 @@
     </div>
   </div>
 </template>
-<script lang="ts">
-type Props = {
-  coordinateId: string;
-  coordinateImgSrc: string;
-  itemImgSrc: string;
-  itemName: string;
-  itemColor: string;
-};
-export default defineComponent({
-  props: {
-    coordinateId: {
-      type: String,
-      required: true,
-    },
-    coordinateImgSrc: {
-      type: String,
-      required: true,
-    },
-    itemImgSrc: {
-      type: String,
-      required: true,
-    },
-    itemName: {
-      type: String,
-      required: true,
-    },
-    itemColor: {
-      type: String,
-      required: true,
-    },
-  },
-});
+<script setup lang="ts">
+defineProps({
+  coordinateId: String,
+  coordinateImgSrc: String,
+  itemImgSrc: String,
+  itemName: String,
+  itemColor: String
+})
 </script>

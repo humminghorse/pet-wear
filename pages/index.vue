@@ -1,6 +1,4 @@
 <template>
-  <!-- 参考: このページを真似している https://wear.jp/coordinate/?tag_ids=600 -->
-  <!-- 参考: containerクラス https://tailwindcss.jp/docs/container#app -->
   <div class="container mx-auto pl-4 pr-4 bg-white">
     <TheHeader />
     <div class="tabs tabs-boxed w-full">
@@ -56,12 +54,11 @@
     <TheFooter />
   </div>
 </template>
-<script setup lang="ts">
+<script setup lang="ts"> // 参考: Nuxt3におけるscript setupの基本的な使い方とFAQ(https://zenn.dev/coedo/articles/86bc31acb4ea47)
 import CoordinateListJson from '@/assets/json/coordinateList.json'
 import ItemColorsJson from '@/assets/json/itemColors.json'
 const itemColors = ItemColorsJson.itemColors
 const checkedItemColor = ref<String>('')
-
 
 const coordinateList = ref(CoordinateListJson.coordinateList)
 const FilteredCoordinateList = ref(CoordinateListJson.coordinateList)
@@ -69,13 +66,4 @@ const FilteredCoordinateList = ref(CoordinateListJson.coordinateList)
 watch(checkedItemColor, () => {
   FilteredCoordinateList.value = coordinateList.value.filter(item => item.itemColor === checkedItemColor.value)
 })
-
 </script>
-<style lang="css">
-/* .bg-orange-sample {
-  background-color: #e7541c;
-}
-.bg-blue-sample {
-  background-color: #000099;
-} */
-</style>
