@@ -1,7 +1,7 @@
 <template>
   <div class="w-full relative">
     <!-- TODO: 縦長にトリムしたい -->
-    <img class="object-cover h-600 w-full" :src="coordinationImgSrc">
+    <img class="object-cover h-600 w-full" :src="coordinateImgSrc">
     <!-- 参考: 【HTML・CSS】画像の上に画像や文字を重ねる方法 https://public-constructor.com/display-icon-on-image/ -->
     <!-- 参考: CSSのposition: absoluteとrelativeとは https://uxmilk.jp/63409 -->
     <div class="w-20 h-6 bg-black bg-opacity-50 absolute bottom-1 left-1">
@@ -24,7 +24,7 @@
 <script setup lang="ts">
 import { EyeIcon } from '@heroicons/vue/solid'
 const props = defineProps({
-  coordinationImgSrc: String,
+  coordinateImgSrc: String,
   watchedCount: Number,
   itemTagPosition: Object,
   itemName: String

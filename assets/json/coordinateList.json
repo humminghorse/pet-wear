@@ -1,8 +1,8 @@
 {
-  "coordinationList": [
+  "coordinateList": [
     {
-      "coordinationId": "1",
-      "coordinationImgSrc": "/assets/image/miru-red-collar.jpg",
+      "coordinateId": "1",
+      "coordinateImgSrc": "/assets/image/miru-red-collar.jpg",
       "watchedCount": 158,
       "itemTagPosition": { 
         "left": "58%",
@@ -18,8 +18,8 @@
       "date": "2022/04/01 12:00:00"
     },
     {
-      "coordinationId": "2",
-      "coordinationImgSrc": "/assets/image/pan-red-collar.jpeg",
+      "coordinateId": "2",
+      "coordinateImgSrc": "/assets/image/pan-red-collar.jpeg",
       "watchedCount": 200,
       "itemTagPosition": { 
         "left": "58%",
@@ -35,8 +35,8 @@
       "date": "2022/04/01 13:00:00"
     },
     {
-      "coordinationId": "3",
-      "coordinationImgSrc": "/assets/image/miru-yellow-collar.jpeg",
+      "coordinateId": "3",
+      "coordinateImgSrc": "/assets/image/miru-yellow-collar.jpeg",
       "watchedCount": 300,
       "itemTagPosition": { 
         "left": "65%",
@@ -52,8 +52,8 @@
       "date": "2022/04/01 14:00:00"
     },
     {
-      "coordinationId": "4",
-      "coordinationImgSrc": "/assets/image/pan-with-nessie.jpeg",
+      "coordinateId": "4",
+      "coordinateImgSrc": "/assets/image/pan-with-nessie.jpeg",
       "watchedCount": 400,
       "itemTagPosition": { 
         "left": "70%",
@@ -69,8 +69,8 @@
       "date": "2022/04/01 15:00:00"
     },
     {
-      "coordinationId": "5",
-      "coordinationImgSrc": "/assets/image/pan-in-nepia.jpeg",
+      "coordinateId": "5",
+      "coordinateImgSrc": "/assets/image/pan-in-nepia.jpeg",
       "watchedCount": 500,
       "itemTagPosition": { 
         "left": "38%",

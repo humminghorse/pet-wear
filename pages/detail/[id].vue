@@ -12,8 +12,8 @@
         <ul>
           <li><a href="/">TOP</a></li>
           <!-- <li><a>今橋 陵</a></li>  -->
-          <li><a>{{coordinationDetail.petName}}</a></li>
-          <li>{{formatDate(coordinationDetail.date)}}のコーディネート</li>
+          <li><a>{{coordinateDetail.petName}}</a></li>
+          <li>{{formatDate(coordinateDetail.date)}}のコーディネート</li>
         </ul>
       </div>
       <!-- シェアボタン -->
@@ -35,12 +35,12 @@
         <!-- 疑問: divタグ必要？(imgタグに直接h,wを指定すれば済む。構造上のひとかたまりを示すために入れる？(それなら、user-iconみたいな分かりやすいclass名をつけた方が良さそう)) -->
         <div class="h-16 w-16">
           <!-- memo: object-coverとh,wを指定して画像のトリムをしないと横長の丸になる https://www.webcreatorbox.com/tech/object-fit -->
-          <img class="object-cover h-full w-full rounded-full" :src="coordinationDetail.petIconSrc">
+          <img class="object-cover h-full w-full rounded-full" :src="coordinateDetail.petIconSrc">
         </div>
         <!-- ユーザー名 -->
         <div class="ml-4">
           <!-- memo: pかspanかで迷ったけど、意味をもつテキストの固まりはpになるらしい -->
-          <p class="text-2xl">{{coordinationDetail.petName}}</p>
+          <p class="text-2xl">{{coordinateDetail.petName}}</p>
         </div>
       </div>
       <!-- フォローボタン -->
@@ -60,11 +60,11 @@
       <!-- content_sub -->
       <div class="w-3/5">
         <!-- コーディネート画像 -->
-        <CoordinationImage
-          :coordinationImgSrc="coordinationDetail.coordinationImgSrc"
-          :watchedCount="coordinationDetail.watchedCount"
-          :itemTagPosition="coordinationDetail.itemTagPosition"
-          :itemName="coordinationDetail.itemName"
+        <CoordinateImage
+          :coordinateImgSrc="coordinateDetail.coordinateImgSrc"
+          :watchedCount="coordinateDetail.watchedCount"
+          :itemTagPosition="coordinateDetail.itemTagPosition"
+          :itemName="coordinateDetail.itemName"
         />
         
         <!-- TODO: 各種アクションボタン -->
@@ -80,11 +80,11 @@
       <!-- content_main -->
       <div class="w-2/5 p-4">
         <!-- コーディネート詳細 -->
-        <CoordinationDetail
-          :petName="coordinationDetail.petName"
-          :itemName="coordinationDetail.itemName"
-          :description="coordinationDetail.description"
-          :date="coordinationDetail.date"
+        <CoordinateDetail
+          :petName="coordinateDetail.petName"
+          :itemName="coordinateDetail.itemName"
+          :description="coordinateDetail.description"
+          :date="coordinateDetail.date"
         />
         <!-- TODO: 着用アイテム -->
         <div class="w-full mt-4 px-4 py-4 bg-white border-2">
@@ -93,11 +93,11 @@
             <div class="flex flex-col items-center">
               <figure class="pt-2">
                 <img
-                  :src="coordinationDetail.itemImgSrc"
+                  :src="coordinateDetail.itemImgSrc"
                   class="object-cover w-64 rounded-xl"
                 />
               </figure>
-              <p class="my-2 py-2">{{coordinationDetail.itemName}}</p>
+              <p class="my-2 py-2">{{coordinateDetail.itemName}}</p>
             </div>
           </div>
         </div>
@@ -114,14 +114,14 @@
 <script setup lang="ts"> // 参考: https://zenn.dev/coedo/articles/86bc31acb4ea47
 // 参考: https://github.com/tailwindlabs/heroicons#vue
 import { ShareIcon, UserAddIcon } from '@heroicons/vue/solid'
-import CoordinationDetailJson from '@/assets/json/coordinationDetail.json'
-import CoordinationListJson from '@/assets/json/coordinationList.json'
+import CoordinateDetailJson from '@/assets/json/coordinateDetail.json'
+import CoordinateListJson from '@/assets/json/coordinateList.json'
 
 const route = useRoute()
-const coordinationId = route.params.id
+const coordinateId = route.params.id
 
-const coordinationList = CoordinationListJson.coordinationList
-const coordinationDetail = coordinationList.find(coordinationDetail => coordinationDetail.coordinationId === coordinationId)
+const coordinateList = CoordinateListJson.coordinateList
+const coordinateDetail = coordinateList.find(coordinateDetail => coordinateDetail.coordinateId === coordinateId)
 
 // TODO: 共通部品化
 const formatDate = (date) =>{

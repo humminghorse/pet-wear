@@ -3,10 +3,10 @@
     class="card bg-base-100 h-auto mt-2 shadow-xl"
     style="width: calc(33.333333% - 1rem)"
   >
-    <a :href="'/detail/' + coordinationId">
+    <a :href="'/detail/' + coordinateId">
       <figure class="px-2 pt-2">
         <img
-          :src="coordinationImgSrc"
+          :src="coordinateImgSrc"
           class="rounded-xl object-contain h-48"
         />
       </figure>
@@ -36,19 +36,19 @@
 </template>
 <script lang="ts">
 type Props = {
-  coordinationId: string;
-  coordinationImgSrc: string;
+  coordinateId: string;
+  coordinateImgSrc: string;
   itemImgSrc: string;
   itemName: string;
   itemColor: string;
 };
 export default defineComponent({
   props: {
-    coordinationId: {
+    coordinateId: {
       type: String,
       required: true,
     },
-    coordinationImgSrc: {
+    coordinateImgSrc: {
       type: String,
       required: true,
     },
