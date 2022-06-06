@@ -11,7 +11,7 @@
     </div>
     <div class="border-b-2">
       <h1 class="mt-4 text-2xl">コーディネート一覧</h1>
-      <p class="mt-2 text-right">{{coordinateListCount}}件</p>
+      <p class="mt-2 text-right">{{FilteredCoordinateList.length}}件</p>
     </div>
 
     <!-- body -->
@@ -65,7 +65,6 @@ const checkedItemColor = ref<String>('')
 
 const coordinateList = ref(CoordinateListJson.coordinateList)
 const FilteredCoordinateList = ref(CoordinateListJson.coordinateList)
-const coordinateListCount = FilteredCoordinateList.value.length
 
 watch(checkedItemColor, () => {
   FilteredCoordinateList.value = coordinateList.value.filter(item => item.itemColor === checkedItemColor.value)
