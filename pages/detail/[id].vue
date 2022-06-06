@@ -10,7 +10,7 @@
       <!-- パンくずリスト: https://daisyui.com/components/breadcrumbs/#breadcrumbs -->
       <div class="text-sm breadcrumbs">
         <ul>
-          <li><a>TOP</a></li>
+          <li><a href="/">TOP</a></li>
           <!-- <li><a>今橋 陵</a></li>  -->
           <li><a>{{coordinationDetail.petName}}</a></li>
           <li>{{formatDate(coordinationDetail.date)}}のコーディネート</li>

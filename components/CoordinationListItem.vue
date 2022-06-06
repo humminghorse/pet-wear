@@ -3,14 +3,14 @@
     class="card bg-base-100 h-auto mt-2 shadow-xl"
     style="width: calc(33.333333% - 1rem)"
   >
-    <nuxt-link :to="'/detail/' + coordinationId">
+    <a :href="'/detail/' + coordinationId">
       <figure class="px-2 pt-2">
         <img
           :src="coordinationImgSrc"
           class="rounded-xl object-contain h-48"
         />
       </figure>
-    </nuxt-link>
+    </a>
     <div class="card-body items-center text-center">
       <h3 class="text-sm -ml-24 -mt-4">着用中のアイテム</h3>
       <div class="flex items-center">
