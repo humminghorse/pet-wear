@@ -1,5 +1,6 @@
 <template>
   <!-- パンくずリストとシェアボタン -->
+  <!-- TODO: コンポーネント化  -->
   <div class="flex justify-between">
     <div class="text-sm breadcrumbs">
       <ul>

@@ -2,13 +2,11 @@
   <TheTab />
 
   <!-- タイトル -->
-  <div class="border-b-2">
-    <h1 class="mt-4 text-2xl">コーディネート一覧</h1>
-    <p class="mt-2 text-right">{{FilteredCoordinateList.length}}件</p>
-  </div>
+  <h1 class="mt-4 text-2xl">コーディネート一覧</h1>
 
   <!-- body -->
-  <div class="flex items-start bg-neutral">
+  <p class="mt-2 text-right">{{FilteredCoordinateList.length}}件</p>
+  <div class="border-t-2 flex items-start bg-neutral">
     <div class="control-panel bg-white flex-auto m-4 p-2 w-1/12">
       <!-- <BaseRadio
         radioTitle="ペットの種類"
