@@ -40,7 +40,7 @@
       </div>
       <div class="content flex flex-wrap gap-4 mx-4 my-4 w-3/4">
         <template v-for="coordinateListItem in  FilteredCoordinateList" :key="coordinateListItem.coordinateId">
-          <CoordinatesListItem
+          <CoordinateListItem
             :coordinateId="coordinateListItem.coordinateId"
             :coordinateImgSrc="coordinateListItem.coordinateImgSrc"
             :itemImgSrc="coordinateListItem.itemImgSrc"

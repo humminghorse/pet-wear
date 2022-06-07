@@ -42,7 +42,7 @@
     <div class="flex items-start bg-neutral">
       <!-- サブコンテンツ -->
       <div class="w-3/5">
-        <CoordinatesImage
+        <CoordinateImage
           :coordinateImgSrc="coordinateDetail.coordinateImgSrc"
           :watchedCount="coordinateDetail.watchedCount"
           :itemTagPosition="coordinateDetail.itemTagPosition"
@@ -61,7 +61,7 @@
       </div>
       <!-- メインコンテンツ -->
       <div class="w-2/5 p-4">
-        <CoordinatesDetail
+        <CoordinateDetail
           :petName="coordinateDetail.petName"
           :itemName="coordinateDetail.itemName"
           :description="coordinateDetail.description"
