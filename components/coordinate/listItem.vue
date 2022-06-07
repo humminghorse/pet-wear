@@ -23,12 +23,12 @@
         </p>
       </div>
       <div class="card-actions mt-2">
-        <button class="btn btn-primary w-full">
+        <a href="/items/1" class="btn btn-primary w-full">
           アイテムの<br />詳細を見る
-        </button>
-        <button class="btn btn-primary w-full">
+        </a>
+        <a href="/pets/1" class="btn btn-primary w-full">
           この子の<br />他のコーディネートを見る
-        </button>
+        </a>
       </div>
     </div>
   </div>
