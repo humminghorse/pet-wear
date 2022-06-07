@@ -4,7 +4,7 @@
   <div class="flex justify-between">
     <div class="text-sm breadcrumbs">
       <ul>
-        <li><a href="/">TOP</a></li>
+        <li><a href="/">コーディネート一覧</a></li>
         <!-- <li><a>今橋 陵</a></li>  -->
         <li><a>{{coordinateDetail.petName}}</a></li>
         <li>{{yearMonthDate(coordinateDetail.date)}}のコーディネート</li>
