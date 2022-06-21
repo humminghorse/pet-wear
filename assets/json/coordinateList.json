@@ -8,6 +8,7 @@
         "left": "58%",
         "top": "40%"
       },
+      "petId": "1",
       "petName": "みる",
       "petIconSrc": "/assets/image/miru.jpg",
       "itemName": "Catlog(Red)",
@@ -25,6 +26,7 @@
         "left": "58%",
         "top": "67%"
       },
+      "petId": "2",
       "petName": "ぱん",
       "petIconSrc": "/assets/image/pan.jpg",
       "itemName": "Catlog(Red)",
@@ -42,6 +44,7 @@
         "left": "65%",
         "top": "67%"
       },
+      "petId": "1",
       "petName": "みる",
       "petIconSrc": "/assets/image/miru.jpg",
       "itemName": "ハンドメイドのお花付き首輪(Yellow)",
@@ -59,6 +62,7 @@
         "left": "70%",
         "top": "70%"
       },
+      "petId": "2",
       "petName": "ぱん",
       "petIconSrc": "/assets/image/pan.jpg",
       "itemName": "ネッシーぬいぐるみ",
@@ -76,6 +80,7 @@
         "left": "38%",
         "top": "70%"
       },
+      "petId": "2",
       "petName": "ぱん",
       "petIconSrc": "/assets/image/pan.jpg",
       "itemName": "nepia",
