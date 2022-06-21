@@ -1,0 +1,40 @@
+{
+  "pets": [
+    {
+      "petId": "1",
+      "petName": "みる",
+      "petType": "cat",
+      "petIconSrc": "/assets/image/miru.jpg",
+      "petBreed": "ハチワレ",
+      "introduction": "白黒のハチワレ猫です。人懐っこい性格で、飼い主をお尻に敷いて眠るのが好きです。",
+      "petBirthday": "2018/08/08"
+    },
+    {
+      "coordinateId": "2",
+      "petName": "ぱん",
+      "petType": "cat",
+      "petIconSrc": "/assets/image/pan.jpg",
+      "petBreed": "ハチワレ",
+      "introduction": "白黒のハチワレ猫です。ひとりの時間を大事にするタイプです。太っています。",
+      "petBirthday": "2018/08/08"
+    },
+    {
+      "coordinateId": "3",
+      "petName": "ぽち",
+      "petType": "dog",
+      "petIconSrc": "/assets/image/pochi.jpg",
+      "petBreed": "パグ",
+      "introduction": "黒くて頭が大きな犬です。パグ？",
+      "petBirthday": "2021/02/21"
+    },
+    {
+      "coordinateId": "4",
+      "petName": "わんこ",
+      "petType": "dog",
+      "petIconSrc": "/assets/image/wanko.jpg",
+      "petBreed": "チワワ",
+      "introduction": "チワワです。",
+      "petBirthday": "2021/10/10"
+    }
+  ]
+}

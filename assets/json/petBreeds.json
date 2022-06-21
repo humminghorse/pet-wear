@@ -1,0 +1,12 @@
+{
+  "petBreeds": [
+    {
+      "value": "tuxedo",
+      "label": "ハチワレ"
+    },
+    {
+      "value": "pug",
+      "label": "パグ"
+    }
+  ]
+}

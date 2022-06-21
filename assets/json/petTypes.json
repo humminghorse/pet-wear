@@ -1,0 +1,12 @@
+{
+  "petTypes": [
+    {
+      "value": "cat",
+      "label": "猫"
+    },
+    {
+      "value": "dog",
+      "label": "犬"
+    }
+  ]
+}
