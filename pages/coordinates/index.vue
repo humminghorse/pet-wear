@@ -36,6 +36,7 @@
         <CoordinateListItem
           :coordinateId="coordinateListItem.coordinateId"
           :coordinateImgSrc="coordinateListItem.coordinateImgSrc"
+          :petId="coordinateListItem.petId"
           :itemImgSrc="coordinateListItem.itemImgSrc"
           :itemName="coordinateListItem.itemName"
           itemColor=""

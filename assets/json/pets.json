@@ -10,7 +10,7 @@
       "petBirthday": "2018/08/08"
     },
     {
-      "coordinateId": "2",
+      "petId": "2",
       "petName": "ぱん",
       "petType": "cat",
       "petIconSrc": "/assets/image/pan.jpg",
@@ -19,7 +19,7 @@
       "petBirthday": "2018/08/08"
     },
     {
-      "coordinateId": "3",
+      "petId": "3",
       "petName": "ぽち",
       "petType": "dog",
       "petIconSrc": "/assets/image/pochi.jpg",
@@ -28,7 +28,7 @@
       "petBirthday": "2021/02/21"
     },
     {
-      "coordinateId": "4",
+      "petId": "4",
       "petName": "わんこ",
       "petType": "dog",
       "petIconSrc": "/assets/image/wanko.jpg",

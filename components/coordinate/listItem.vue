@@ -26,7 +26,7 @@
         <a href="/items/1" class="btn btn-primary w-full">
           アイテムの<br />詳細を見る
         </a>
-        <a href="/pets/1" class="btn btn-primary w-full">
+        <a :href="'/pets/' + petId" class="btn btn-primary w-full">
           この子の<br />他のコーディネートを見る
         </a>
       </div>
@@ -37,6 +37,7 @@
 defineProps({
   coordinateId: String,
   coordinateImgSrc: String,
+  petId: String,
   itemImgSrc: String,
   itemName: String,
   itemColor: String

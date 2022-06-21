@@ -36,7 +36,6 @@ const checkedPetType = ref<String>('')
 
 const pets = ref(PetsJson.pets)
 const FilteredPets = ref(PetsJson.pets)
-console.log(pets.value)
 watch(checkedPetType, () => {
   FilteredPets.value = pets.value.filter(pet => pet.petType === checkedPetType.value)
 })
