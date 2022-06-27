@@ -37,9 +37,9 @@
   </div>
 
   <!-- ボディ -->
-  <div class="flex items-start bg-neutral">
+  <div class="sm:flex items-start bg-neutral">
     <!-- サブコンテンツ -->
-    <div class="w-3/5">
+    <div class="sm:w-3/5">
       <CoordinateImage
         :coordinateImgSrc="coordinateDetail.coordinateImgSrc"
         :watchedCount="coordinateDetail.watchedCount"
@@ -58,14 +58,14 @@
 
     </div>
     <!-- メインコンテンツ -->
-    <div class="w-2/5 p-4">
+    <div class="flex gap-x-2 sm:block sm:gap-x-0 sm:w-2/5 p-4">
       <CoordinateDetail
         :petName="coordinateDetail.petName"
         :itemName="coordinateDetail.itemName"
         :description="coordinateDetail.description"
         :date="coordinateDetail.date"
       />
-      <div class="w-full mt-4 px-4 py-4 bg-white border-2">
+      <div class="w-full sm:mt-4 px-4 py-4 bg-white border-2">
         <h1 class="text-lg">着用アイテム</h1>
         <div class="flex gap-2 items-center justify-center">
           <div class="flex flex-col items-center">
