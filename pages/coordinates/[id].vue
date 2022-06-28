@@ -1,7 +1,7 @@
 <template>
   <!-- パンくずリストとシェアボタン -->
   <!-- TODO: コンポーネント化  -->
-  <div class="flex justify-between">
+  <div class="sm:flex sm:justify-between">
     <div class="text-sm breadcrumbs">
       <ul>
         <li><a href="/">コーディネート一覧</a></li>
@@ -10,7 +10,7 @@
         <li>{{yearMonthDate(coordinateDetail.date)}}のコーディネート</li>
       </ul>
     </div>
-    <div class="mt-2">
+    <div class="flex flex-row-reverse mt-2">
       <button class="btn w-24 bg-accent text-white min-h-0 h-full flex p-2">
         <ShareIcon class="w-5 mr-0.5 shrink-0"/>
         <span>シェアする</span>
