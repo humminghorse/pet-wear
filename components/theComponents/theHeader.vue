@@ -5,7 +5,7 @@
     <div class="navbar-center">
       <a href="/" class="btn btn-ghost normal-case text-xl tracking-widest">PETWEAR</a>
     </div>
-    <div class="navbar-end w-1/5 sm:w-1/2">
+    <div class="navbar-end">
       <button class="btn btn-ghost px-1 sm:px-4">
         <svg
           xmlns="http://www.w3.org/2000/svg"
