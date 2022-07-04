@@ -1,5 +1,5 @@
 <template>
-  <div class="tabs tabs-boxed w-full">
+  <div class="hidden sm:inline-flex tabs tabs-boxed w-full">
     <!-- TODO: tabとw-1/4をclassにしたい -->
     <a href="/coordinates" :class="['tab', 'w-1/4', {'tab-active': isCoordinates}]">コーディネート</a>
     <a href="/pets" :class="['tab', 'w-1/4', {'tab-active': isPets}]">ペット</a>
