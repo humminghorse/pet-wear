@@ -3,9 +3,7 @@
     <div class="navbar-start">
     </div>
     <div class="navbar-center">
-      <!-- TODO: デバイスが小さい時にP E T W E A Rを真ん中に配置したい -->
-      <!-- TODO: スペースを入れずに、CSSでテキストの幅を調整する -->
-      <a href="/" class="btn btn-ghost normal-case text-xl">P E T W E A R</a>
+      <a href="/" class="btn btn-ghost normal-case text-xl tracking-widest">PETWEAR</a>
     </div>
     <div class="navbar-end w-1/5 sm:w-1/2">
       <button class="btn btn-ghost px-1 sm:px-4">
