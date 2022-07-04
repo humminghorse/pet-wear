@@ -1,14 +1,6 @@
 {
   "itemColors": [
     {
-      "value": "white",
-      "label": "白"
-    },
-    {
-      "value": "black",
-      "label": "黒"
-    },
-    {
       "value": "red",
       "label": "赤"
     },
