@@ -6,7 +6,7 @@
       <ul>
         <li><a href="/">コーディネート一覧</a></li>
         <!-- <li><a>今橋 陵</a></li>  -->
-        <li><a>{{coordinateDetail.petName}}</a></li>
+        <li><a :href='"/pets/" + coordinateDetail.petId'>{{coordinateDetail.petName}}</a></li>
         <li>{{yearMonthDate(coordinateDetail.date)}}のコーディネート</li>
       </ul>
     </div>
@@ -20,14 +20,14 @@
 
   <!-- ユーザー別のヘッダー -->
   <div class="flex justify-between items-center w-full my-4">
-    <div class="flex items-center">
+    <a :href='"/pets/" + coordinateDetail.petId' class="flex items-center">
       <div class="h-16 w-16">
         <img class="object-cover h-full w-full rounded-full" :src="coordinateDetail.petIconSrc">
       </div>
       <div class="ml-4">
         <p class="text-2xl">{{coordinateDetail.petName}}</p>
       </div>
-    </div>
+    </a>
     <div class="pt-2">
       <button class="btn gap-x-0.5 min-h-0 h-full flex p-2 bg-accent text-white">
         <UserAddIcon class="w-5"/>

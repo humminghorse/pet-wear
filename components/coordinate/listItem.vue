@@ -12,24 +12,22 @@
       </figure>
     </a>
     <div class="card-body items-center text-center">
-      <h3 class="text-sm -ml-24 -mt-4">着用中のアイテム</h3>
-      <div class="flex items-center">
-        <img
-          :src="itemImgSrc"
-          class="rounded-xl h-12 object-contain"
-        />
+      <!-- TODO: ブラウザのサイズを変えているときに崩れる -->
+      <h3 class="text-sm -ml-24 -mt-4">着用アイテム</h3>
+      <a href="/items/1" class="flex items-center">
+          <img
+            :src="itemImgSrc"
+            class="rounded-xl h-12 object-contain"
+          />
         <p class="text-sm ml-4">
           {{ itemName }}
         </p>
-      </div>
-      <div class="card-actions mt-2">
-        <a href="/items/1" class="btn btn-primary w-full">
-          アイテムの<br />詳細を見る
-        </a>
+      </a>
+      <!-- <div class="hidden sm:inline card-actions mt-2">
         <a :href="'/pets/' + petId" class="btn btn-primary w-full">
           この子の<br />他のコーディネートを見る
         </a>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
