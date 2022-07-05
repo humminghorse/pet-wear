@@ -3,17 +3,17 @@
     class="card bg-base-100 h-auto mt-1 mb-1 shadow-xl card-width"
   >
     <a :href="'/coordinates/' + coordinateId">
-      <figure class="px-2 pt-2">
+      <figure class="sm:px-2 sm:pt-2">
         <img
           :src="coordinateImgSrc"
-          class="rounded-xl object-contain h-48"
+          class="object-cover sm:rounded-xl sm:object-contain sm:h-48"
         />
       </figure>
     </a>
     <div class="card-body items-center text-center">
       <!-- TODO: ブラウザのサイズを変えているときに崩れる -->
       <h3 class="text-sm -mt-4">着用アイテム</h3>
-      <a href="/items/1" class="flex flex-col sm:flex-row">
+      <a href="/items/1" class="flex gap-2 items-center sm:flex-row">
         <img
           :src="itemImgSrc"
           class="rounded-xl h-12 object-contain"
@@ -41,13 +41,14 @@ defineProps({
 })
 </script>
 <style scoped>
-@media (max-width: 639px) {
-  .card-width {
-    width: calc(50% - 1rem);
-  }
+.card-width {
+  @apply rounded-none;
+  width: 100%;
 }
-@media (min-width: 640px) {
+/* @media (min-width: 640px) { */
+@screen sm {
   .card-width {
+    @apply rounded-xl;
     width: calc(33.333333% - 1rem);
   }
 }
