@@ -7,7 +7,7 @@
   <!-- body -->
   <p class="mt-2 text-right">{{FilteredCoordinateList.length}}件</p>
   <div class="border-t-2 flex items-start bg-neutral">
-    <div class="control-panel bg-white flex-auto m-4 p-2 w-1/12">
+    <div class="hidden sm:inline control-panel bg-white flex-auto m-4 p-2 w-1/12">
       <!-- <BaseRadio
         radioTitle="ペットの種類"
         radioName="radio-pet-type"
@@ -31,7 +31,7 @@
         @update:checkedValue='newValue => {checkedItemColor = newValue}'
       />
     </div>
-    <div class="content flex flex-wrap gap-4 mx-4 my-4 w-3/4">
+    <div class="content flex flex-wrap gap-4 ml-4 sm:ml-0 sm:mx-4 sm:my-4 sm:w-3/4">
       <template v-for="coordinateListItem in  FilteredCoordinateList" :key="coordinateListItem.coordinateId">
         <CoordinateListItem
           :coordinateId="coordinateListItem.coordinateId"
