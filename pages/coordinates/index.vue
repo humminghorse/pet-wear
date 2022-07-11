@@ -31,7 +31,7 @@
         @update:checkedValue='newValue => {checkedItemColor = newValue}'
       />
     </div>
-    <div class="content flex flex-wrap gap-4 ml-4 sm:ml-0 sm:mx-4 sm:my-4 sm:w-3/4">
+    <div class="content flex flex-wrap sm:gap-4 sm:mx-4 sm:my-4 sm:w-3/4">
       <template v-for="coordinateListItem in  FilteredCoordinateList" :key="coordinateListItem.coordinateId">
         <CoordinateListItem
           :coordinateId="coordinateListItem.coordinateId"

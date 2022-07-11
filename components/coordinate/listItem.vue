@@ -1,6 +1,6 @@
 <template>
   <div
-    class="card bg-base-100 h-auto mt-1 mb-1 shadow-xl card-width"
+    class="card bg-base-100 h-auto shadow-xl card-width"
   >
     <a :href="'/coordinates/' + coordinateId">
       <figure class="sm:px-2 sm:pt-2">
@@ -11,7 +11,6 @@
       </figure>
     </a>
     <div class="card-body items-center text-center">
-      <!-- TODO: ブラウザのサイズを変えているときに崩れる -->
       <h3 class="text-sm -mt-4">着用アイテム</h3>
       <a href="/items/1" class="flex gap-2 items-center sm:flex-row">
         <img
