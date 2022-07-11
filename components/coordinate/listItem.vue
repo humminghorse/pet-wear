@@ -10,14 +10,14 @@
         />
       </figure>
     </a>
-    <div class="card-body items-center text-center">
-      <h3 class="text-sm -mt-4">着用アイテム</h3>
+    <div class="card-body sm:items-center text-center">
+      <h3 class="hidden sm:inline text-sm -mt-4">着用アイテム</h3>
       <a href="/items/1" class="flex gap-2 items-center sm:flex-row">
         <img
           :src="itemImgSrc"
-          class="rounded-xl h-12 object-contain"
+          class="rounded-xl h-24 sm:h-12 object-contain w-1/3 sm:w-auto"
         />
-        <p class="text-sm ml-0 sm:ml-4">
+        <p class="sm:text-sm ml-0 sm:ml-4 w-2/3 sm:w-auto text-left">
           {{ itemName }}
         </p>
       </a>
