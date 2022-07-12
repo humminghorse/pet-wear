@@ -1,12 +1,13 @@
 <template>
   <div class="flex items-center w-full my-4">
     <div class="w-1/4 mb-4">
-      <div class="h-64 w-64 mx-auto">
+      <!-- 固定値指定せずに画像を円形にするにはどうすれば良い？ 「横幅と同じ高さ」みたいな指定はできる？ -->
+      <div class="h-20 w-20 sm:h-32 sm:w-32 lg:h-64 lg:w-64 mx-auto">
         <img class="object-cover h-full w-full rounded-full" :src="pet.petIconSrc">
       </div>
       <button class="btn mx-auto my-2 gap-x-0.5 min-h-0 h-full flex p-2 bg-accent text-white">
         <UserAddIcon class="w-5"/>
-        <span class="text-white">フォローする</span>
+        <span class="hidden sm:inline text-white">フォローする</span>
       </button>
     </div>
     <div class="w-3/4 p-2">
@@ -14,9 +15,9 @@
       <p class="text-lg">{{pet.introduction}}</p>
     </div>
   </div>
-  <h2 class="text-2xl mt-4 mb-2">{{pet.petName}}のコーディネート一覧</h2>
+  <h2 class="ml-2 sm:ml-0 text-2xl mt-4 mb-2">{{pet.petName}}のコーディネート一覧</h2>
   <div class="border-t-2 flex bg-neutral">
-    <div class="content w-full flex flex-wrap justify-center gap-4 mx-4 my-4">
+    <div class="content w-full flex flex-wrap justify-center sm:gap-4 sm:mx-4 sm:my-4">
       <template v-for="coordinateListItem in  coordinateList" :key="coordinateListItem.coordinateId">
         <CoordinateListItem
           :coordinateId="coordinateListItem.coordinateId"
