@@ -1,4 +1,21 @@
 <template>
+  <!-- パンくずリストとシェアボタン -->
+  <!-- TODO: コンポーネント化  -->
+  <div class="sm:flex sm:justify-between">
+    <nav class="text-sm breadcrumbs">
+      <ul>
+        <li><a href="/pets">ペット一覧</a></li>
+        <li>{{pet.petName}}</li>
+      </ul>
+    </nav>
+    <div class="flex flex-row-reverse mt-2">
+      <button class="btn w-24 bg-accent text-white min-h-0 h-full flex p-2">
+        <ShareIcon class="w-5 mr-0.5 shrink-0"/>
+        <span>シェアする</span>
+      </button>
+    </div>
+  </div>
+
   <div class="flex items-center w-full my-4">
     <div class="w-1/4 mb-4">
       <!-- 固定値指定せずに画像を円形にするにはどうすれば良い？ 「横幅と同じ高さ」みたいな指定はできる？ -->

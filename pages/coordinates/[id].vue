@@ -2,14 +2,14 @@
   <!-- パンくずリストとシェアボタン -->
   <!-- TODO: コンポーネント化  -->
   <div class="sm:flex sm:justify-between">
-    <div class="text-sm breadcrumbs">
+    <nav class="text-sm breadcrumbs">
       <ul>
         <li><a href="/">コーディネート一覧</a></li>
         <!-- <li><a>今橋 陵</a></li>  -->
         <li><a :href='"/pets/" + coordinateDetail.petId'>{{coordinateDetail.petName}}</a></li>
         <li>{{yearMonthDate(coordinateDetail.date)}}のコーディネート</li>
       </ul>
-    </div>
+    </nav>
     <div class="flex flex-row-reverse mt-2">
       <button class="btn w-24 bg-accent text-white min-h-0 h-full flex p-2">
         <ShareIcon class="w-5 mr-0.5 shrink-0"/>
