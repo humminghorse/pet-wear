@@ -16,10 +16,9 @@
     </div>
   </div>
 
-  <div class="flex items-center w-full my-4">
-    <div class="w-1/4 mb-4">
-      <!-- 固定値指定せずに画像を円形にするにはどうすれば良い？ 「横幅と同じ高さ」みたいな指定はできる？ -->
-      <div class="h-20 w-20 sm:h-32 sm:w-32 lg:h-64 lg:w-64 mx-auto">
+  <div class="flex gap-6 items-center w-full my-4">
+    <div class="w-1/3 md:w-1/4 mb-4 shrink-0">
+      <div class="aspect-square mx-auto">
         <img class="object-cover h-full w-full rounded-full" :src="pet.petIconSrc">
       </div>
       <button class="btn mx-auto my-2 gap-x-0.5 min-h-0 h-full flex p-2 bg-accent text-white">
@@ -27,7 +26,7 @@
         <span class="hidden sm:inline text-white">フォローする</span>
       </button>
     </div>
-    <div class="w-3/4 p-2">
+    <div class="p-2 grow">
       <p class="my-2 text-2xl">{{pet.petName}}</p>
       <p class="text-lg">{{pet.introduction}}</p>
     </div>
