@@ -1,6 +1,6 @@
 <template>
   <div
-    class="card bg-base-100 h-auto mt-1 mb-1 shadow-xl card-width"
+    class="card bg-base-100 h-auto shadow-xl card-width"
   >
     <a :href="'/coordinates/' + coordinateId">
       <figure class="sm:px-2 sm:pt-2">
@@ -10,15 +10,14 @@
         />
       </figure>
     </a>
-    <div class="card-body items-center text-center">
-      <!-- TODO: ブラウザのサイズを変えているときに崩れる -->
-      <h3 class="text-sm -mt-4">着用アイテム</h3>
+    <div class="card-body card-padding sm:items-center text-center">
+      <h3 class="hidden sm:inline text-sm -mt-4">着用アイテム</h3>
       <a href="/items/1" class="flex gap-2 items-center sm:flex-row">
         <img
           :src="itemImgSrc"
-          class="rounded-xl h-12 object-contain"
+          class="rounded-xl h-24 sm:h-12 object-contain w-1/3 sm:w-auto"
         />
-        <p class="text-sm ml-0 sm:ml-4">
+        <p class="sm:text-sm ml-0 sm:ml-4 w-2/3 sm:w-auto text-left">
           {{ itemName }}
         </p>
       </a>
@@ -50,6 +49,33 @@ defineProps({
   .card-width {
     @apply rounded-xl;
     width: calc(33.333333% - 1rem);
+  }
+}
+/* card-bodyのほうが後で書かれていて、効かない場合 */
+.card-body.card-padding {
+  @apply p-2
+}
+@screen md {
+  .card-body.card-padding {
+    @apply p-8
+  }
+}
+/* card-paddingのほうが後で書かれていて、効く場合 */
+.card-padding {
+  @apply p-2
+}
+@screen md {
+  .card-padding {
+    @apply p-8
+  }
+}
+/* .card-bodyを上書きする（Scopedの場合のみ） */
+.card-body {
+  @apply p-2
+}
+@screen md {
+  .card-body {
+    @apply p-8
   }
 }
 </style>

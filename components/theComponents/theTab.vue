@@ -1,11 +1,11 @@
 <template>
-  <div class="hidden sm:inline-flex tabs tabs-boxed w-full">
+  <nav class="hidden sm:inline-flex tabs tabs-boxed w-full">
     <!-- TODO: tabとw-1/4をclassにしたい -->
     <a href="/coordinates" :class="['tab', 'w-1/4', {'tab-active': isCoordinates}]">コーディネート</a>
     <a href="/pets" :class="['tab', 'w-1/4', {'tab-active': isPets}]">ペット</a>
     <a href="/items" :class="['tab', 'w-1/4', {'tab-active': isItems}]">アイテム</a>
     <a href="/shops" :class="['tab', 'w-1/4', {'tab-active': isShops}]">ショップ</a>
-  </div>
+  </nav>
 </template>
 <script setup lang="ts">
 const route = useRoute()

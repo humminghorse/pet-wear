@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar bg-base-100 shadow">
+  <header class="navbar bg-base-100 shadow sticky top-0 z-10">
     <div class="navbar-start">
       <div class="sm:hidden dropdown">
         <label tabindex="0" class="btn btn-ghost btn-circle">
@@ -54,5 +54,5 @@
         </div>
       </button>
     </div>
-  </div>
+  </header>
 </template>

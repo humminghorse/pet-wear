@@ -1,22 +1,39 @@
 <template>
-  <div class="flex items-center w-full my-4">
-    <div class="w-1/4 mb-4">
-      <div class="h-64 w-64 mx-auto">
+  <!-- パンくずリストとシェアボタン -->
+  <!-- TODO: コンポーネント化  -->
+  <div class="sm:flex sm:justify-between">
+    <nav class="text-sm breadcrumbs">
+      <ul>
+        <li><a href="/pets">ペット一覧</a></li>
+        <li>{{pet.petName}}</li>
+      </ul>
+    </nav>
+    <div class="flex flex-row-reverse mt-2">
+      <button class="btn w-24 bg-accent text-white min-h-0 h-full flex p-2">
+        <ShareIcon class="w-5 mr-0.5 shrink-0"/>
+        <span>シェアする</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="flex gap-6 items-center w-full my-4">
+    <div class="w-1/3 md:w-1/4 mb-4 shrink-0">
+      <div class="aspect-square mx-auto">
         <img class="object-cover h-full w-full rounded-full" :src="pet.petIconSrc">
       </div>
       <button class="btn mx-auto my-2 gap-x-0.5 min-h-0 h-full flex p-2 bg-accent text-white">
         <UserAddIcon class="w-5"/>
-        <span class="text-white">フォローする</span>
+        <span class="hidden sm:inline text-white">フォローする</span>
       </button>
     </div>
-    <div class="w-3/4 p-2">
+    <div class="p-2 grow">
       <p class="my-2 text-2xl">{{pet.petName}}</p>
       <p class="text-lg">{{pet.introduction}}</p>
     </div>
   </div>
-  <h2 class="text-2xl mt-4 mb-2">{{pet.petName}}のコーディネート一覧</h2>
+  <h2 class="ml-2 sm:ml-0 text-2xl mt-4 mb-2">{{pet.petName}}のコーディネート一覧</h2>
   <div class="border-t-2 flex bg-neutral">
-    <div class="content w-full flex flex-wrap justify-center gap-4 mx-4 my-4">
+    <div class="content w-full flex flex-wrap justify-center sm:gap-4 sm:mx-4 sm:my-4">
       <template v-for="coordinateListItem in  coordinateList" :key="coordinateListItem.coordinateId">
         <CoordinateListItem
           :coordinateId="coordinateListItem.coordinateId"
