@@ -31,9 +31,9 @@
       <p class="text-lg">{{pet.introduction}}</p>
     </div>
   </div>
-  <div>
+  <div class="mx-2">
     <!-- 右側にマージンが入らない？ -->
-    <table class="table-auto w-full mx-2">
+    <table class="table-auto w-full">
       <!-- 先頭列をヘッダーにする場合、thead, tbodyは入れられない？ -->
       <tr>
         <th class="border px-4 py-2 bg-neutral">種別</th><td class="border px-4 py-2">{{pet.petBreed}}</td>
