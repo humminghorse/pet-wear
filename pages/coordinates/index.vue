@@ -43,7 +43,7 @@
         />
       </template>
     </div>
-    <div class="sm:hidden w-20 h-10 text-white bg-black bg-opacity-50 fixed bottom-4 right-4"> 
+    <div class="sm:hidden w-20 h-10 justify-center content-center text-center align-middle text-white bg-black bg-opacity-50 fixed bottom-4 right-4"> 
       絞り込み
     </div>
   </div>

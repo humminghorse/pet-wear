@@ -32,7 +32,6 @@
     </div>
   </div>
   <div class="mx-2">
-    <!-- 右側にマージンが入らない？ -->
     <table class="table-auto w-full">
       <!-- 先頭列をヘッダーにする場合、thead, tbodyは入れられない？ -->
       <tr>
