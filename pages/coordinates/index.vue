@@ -43,6 +43,9 @@
         />
       </template>
     </div>
+    <div class="sm:hidden w-20 h-10 justify-center content-center text-center align-middle text-white bg-black bg-opacity-50 fixed bottom-4 right-4"> 
+      絞り込み
+    </div>
   </div>
 </template>
 <script setup lang="ts"> // 参考: Nuxt3におけるscript setupの基本的な使い方とFAQ(https://zenn.dev/coedo/articles/86bc31acb4ea47)

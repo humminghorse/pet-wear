@@ -31,6 +31,35 @@
       <p class="text-lg">{{pet.introduction}}</p>
     </div>
   </div>
+  <div class="mx-2">
+    <table class="table-auto w-full">
+      <!-- 先頭列をヘッダーにする場合、thead, tbodyは入れられない？ -->
+      <tr>
+        <th class="border px-4 py-2 bg-neutral">種別</th><td class="border px-4 py-2">{{pet.petBreed}}</td>
+      </tr>
+      <tr>
+        <th class="border px-4 py-2 bg-neutral">誕生日</th><td class="border px-4 py-2">{{pet.petBirthday}}</td>
+      </tr>
+      <tr>
+        <th class="border px-4 py-2 bg-neutral">性別</th><td class="border px-4 py-2">{{pet.profile.gender}}</td>
+      </tr>
+      <tr>
+        <th class="border px-4 py-2 bg-neutral">体重</th><td class="border px-4 py-2">{{pet.profile.weight}}</td>
+      </tr>
+      <tr>
+        <th class="border px-4 py-2 bg-neutral">毛の色</th><td class="border px-4 py-2">{{pet.profile.furColor}}</td>
+      </tr>
+      <tr>
+        <th class="border px-4 py-2 bg-neutral">瞳の色</th><td class="border px-4 py-2">{{pet.profile.eyeColor}}</td>
+      </tr>
+      <tr>
+        <th class="border px-4 py-2 bg-neutral">好きな食べ物</th><td class="border px-4 py-2">{{pet.profile.favoriteFood}}</td>
+      </tr>
+      <tr>
+        <th class="border px-4 py-2 bg-neutral">好きなおもちゃ</th><td class="border px-4 py-2">{{pet.profile.favoriteToy}}</td>
+      </tr>
+    </table>
+  </div>
   <h2 class="ml-2 sm:ml-0 text-2xl mt-4 mb-2">{{pet.petName}}のコーディネート一覧</h2>
   <div class="border-t-2 flex bg-neutral">
     <div class="content w-full flex flex-wrap justify-center sm:gap-4 sm:mx-4 sm:my-4">

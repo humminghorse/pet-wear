@@ -7,7 +7,15 @@
       "petIconSrc": "/assets/image/miru.jpg",
       "petBreed": "ハチワレ",
       "introduction": "白黒のハチワレ猫です。人懐っこい性格で、飼い主をお尻に敷いて眠るのが好きです。",
-      "petBirthday": "2018/08/08"
+      "petBirthday": "2018/08/08",
+      "profile": {
+        "gender": "メス",
+        "weight": "4kg",
+        "furColor": "黒、白",
+        "eyeColor": "黄",
+        "favoriteFood": "ささみジャーキー",
+        "favoriteToy": "ねこじゃらし"
+      }
     },
     {
       "petId": "2",
@@ -16,7 +24,15 @@
       "petIconSrc": "/assets/image/pan.jpg",
       "petBreed": "ハチワレ",
       "introduction": "白黒のハチワレ猫です。ひとりの時間を大事にするタイプです。太っています。",
-      "petBirthday": "2018/08/08"
+      "petBirthday": "2018/08/08",
+      "profile": {
+        "gender": "メス",
+        "weight": "5kg",
+        "furColor": "黒、白",
+        "eyeColor": "黄",
+        "favoriteFood": "ささみジャーキー",
+        "favoriteToy": "ねずみのレーザーポインター"
+      }
     },
     {
       "petId": "3",
@@ -25,7 +41,15 @@
       "petIconSrc": "/assets/image/pochi.jpg",
       "petBreed": "パグ",
       "introduction": "黒くて頭が大きな犬です。パグ？",
-      "petBirthday": "2021/02/21"
+      "petBirthday": "2021/02/21",
+      "profile": {
+        "gender": "オス",
+        "weight": "6kg",
+        "furColor": "黒",
+        "eyeColor": "茶",
+        "favoriteFood": "お肉全般",
+        "favoriteToy": "噛み心地の良いもの"
+      }
     },
     {
       "petId": "4",
@@ -34,7 +58,15 @@
       "petIconSrc": "/assets/image/wanko.jpg",
       "petBreed": "チワワ",
       "introduction": "チワワです。",
-      "petBirthday": "2021/10/10"
+      "petBirthday": "2021/10/10",
+      "profile": {
+        "gender": "オス",
+        "weight": "3kg",
+        "furColor": "白、ベージュ",
+        "eyeColor": "茶",
+        "favoriteFood": "カリカリ",
+        "favoriteToy": "ボール"
+      }
     }
   ]
 }
