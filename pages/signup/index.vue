@@ -5,17 +5,10 @@
   <!-- body -->
   <div class="mt-4 flex justify-center">
     <!-- memo: grid-auto-flow: column;で横並びにしている。 overflow-x: auto;で横スクロールを可能にしている。-->
-    <ul class="steps grid-cols-3 grid-rows-3 grid-flow-row">
+    <ul class="steps">
       <li class="step step-primary">アカウント作成</li>
       <li class="step">ペット登録</li>
       <li class="step">利用開始</li>
-      <!-- TODO: 以下のliは削除する -->
-      <li class="step">コーディネート投稿</li>
-      <li class="step">コーディネート検索</li>
-      <li class="step">ペット検索</li>
-      <li class="step">ペットのフォロー</li>
-      <li class="step">アイテム検索</li>
-      <li class="step">アイテム購入</li>
     </ul>
   </div>
   
