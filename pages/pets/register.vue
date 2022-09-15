@@ -21,17 +21,32 @@
     <!-- 分類 -->
     <div>
       <legend for="classification" class="label">分類</legend>
+      <div class="flex gap-4">
+        <div class="form-control">
+          <label class="label cursor-pointer justify-start gap-2">
+            <input type="radio" id="dog" name="classification" class="radio checked:bg-red-500" checked />
+            <span class="label-text">犬</span> 
+          </label>
+        </div>
+        <div class="form-control">
+          <label class="label cursor-pointer justify-start gap-2">
+            <input type="radio" id="cat" name="classification" class="radio checked:bg-blue-500" checked />
+            <span class="label-text">猫</span> 
+          </label>
+        </div>
+      </div>
+      <!-- <legend for="classification" class="label">分類</legend>
       <input type="radio" id="dog" name="classification" value="dog" class="radio" v-model="store.classification">
       <label for="dog" class="label-text">犬</label>
       <br>
       <input type="radio" id="cat" name="classification" value="cat" class="radio" v-model="store.classification">
       <label for="cat" class="label-text">猫</label>
-      <br>
+      <br> -->
     </div>
     <!-- 犬種/猫種 -->
     <div>
       <label for="breed" class="label">猫種</label>
-      <select v-model="store.breedId">
+      <select v-model="store.breedId" class="select select-bordered">
         <option disabled value="">選択してください</option>
         <option value="1">マンチカン</option>
         <option value="2">ノルウェージャンフォレストキャット</option>
