@@ -2,36 +2,35 @@
   <!-- タイトル -->
   <h1 class="mt-4 text-2xl ml-2 sm:ml-0">ペット登録</h1>
   <!-- body -->
-  <form @submit.prevent>
+  <form @submit.prevent class="mx-8">
     <!-- 名前 -->
     <div>
-      <label for="name">名前</label>
-      <input id="name" v-model="store.name" type="text"/>
+      <label for="name" class="label">名前</label>
+      <input id="name" v-model="store.name" type="text" class="input input-bordered w-full"/>
     </div>
     <!-- アイコン画像 -->
     <div>
-      <label for="iconFiles">アイコン画像</label>
+      <label for="iconFiles" class="label">アイコン画像</label>
       <input id="iconFiles" @change="uploadIconFile" type="file"/>
     </div>
     <!-- 紹介文 -->
     <div>
-      <label for="introduction">紹介文</label>
-      <input id="introduction" v-model="store.introduction" type="text"/>
+      <label for="introduction" class="label">紹介文</label>
+      <textarea id="introduction" v-model="store.introduction" type="text" class="textarea textarea-bordered w-full"></textarea>
     </div>
     <!-- 分類 -->
     <div>
-      <legend for="classification">分類</legend>
-      <input type="radio" id="dog" name="classification" value="dog" v-model="store.classification">
-      <label for="dog">犬</label>
+      <legend for="classification" class="label">分類</legend>
+      <input type="radio" id="dog" name="classification" value="dog" class="radio" v-model="store.classification">
+      <label for="dog" class="label-text">犬</label>
       <br>
-      <input type="radio" id="cat" name="classification" value="cat" v-model="store.classification">
-      <label for="cat">猫</label>
+      <input type="radio" id="cat" name="classification" value="cat" class="radio" v-model="store.classification">
+      <label for="cat" class="label-text">猫</label>
       <br>
     </div>
     <!-- 犬種/猫種 -->
     <div>
-      <label for="breed">猫種</label>
-      <input id="breed" v-model="store.birthday" type="select"/>
+      <label for="breed" class="label">猫種</label>
       <select v-model="store.breedId">
         <option disabled value="">選択してください</option>
         <option value="1">マンチカン</option>
@@ -41,12 +40,12 @@
     </div>
     <!-- 誕生日 -->
     <div>
-      <label for="birthday">誕生日</label>
+      <label for="birthday" class="label">誕生日</label>
       <input id="birthday" v-model="store.birthday" type="date"/>
     </div>
     <!-- 性別 -->
     <div>
-      <legend for="sex">性別</legend>
+      <legend for="sex" class="label">性別</legend>
       <input type="radio" id="male" name="sex" value="male" v-model="store.sex">
       <label for="male">オス</label>
       <br>
@@ -55,12 +54,12 @@
     </div>
     <!-- 体重 -->
     <div>
-      <label for="weightKg">体重(kg)</label>
+      <label for="weightKg" class="label">体重(kg)</label>
       <input id="weightKg" v-model="store.weightKg" type="number"/>
     </div>
     <!-- 毛の色 -->
     <div>
-      <legend for="furColor">毛の色</legend>
+      <legend for="furColor" class="label">毛の色</legend>
       <p>当てはまるものを複数選んでください</p>
       <input type="checkbox" id="black" name="furColor" value="black" v-model="store.furColor">
       <label for="black">黒</label>
